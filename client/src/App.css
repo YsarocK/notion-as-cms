@@ -1,4 +1,4 @@
-.App, .blog {
+.App{
   text-align: center;
   display: flex;
   justify-content: center;
@@ -7,6 +7,18 @@
   width: 100vw;
   height: 100vh;
   padding: 20px 50px;
+  box-sizing: border-box;
+}
+
+.blog{
+  position: relative;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px 50px;
+  box-sizing: border-box;
 }
 
 .notion-article{
@@ -27,4 +39,21 @@
 .notion-article a {
   text-decoration: none;
   color: black
+}
+
+#reload{
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#reload img{
+  width: 10px;
+  transition: all 0.3s ease-in-out;
+  margin-right: 10px;
+}
+
+#reload:hover img{
+  transform: rotate(360deg) scale(1.2);
 }

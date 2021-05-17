@@ -5,12 +5,13 @@ import Article from './Article'
 export default function Blog() {
 
   const[articles, setArticles] = useState([]);
+  const[apiState, setapiState] = useState("Loading");
 
   async function getArticles() {
+    setapiState('Loading');
     let newArticles = []
     var config = {
         method: 'get',
-        // url: 'http://localhost:5000/notion/articles',
         url: 'https://api-etiennemoureton.herokuapp.com/notion/articles',
       };
       
@@ -29,7 +30,8 @@ export default function Blog() {
     .catch(function (error) {
       console.log(error);
     });
-    setArticles(newArticles)
+    setArticles(newArticles);
+    setapiState('Reload');
   }
 
   useEffect(()=>{
@@ -38,6 +40,10 @@ export default function Blog() {
 
   return(
       <ul className="blog">
+          <div id="reload" onClick={getArticles}>
+            <img src="/loading.png"></img>
+            <p id="">{apiState}</p>
+          </div>
           {articles.map(function(d, idx){
             return (<Article title={d.title} id={d.id} key={idx}/>)
           })}

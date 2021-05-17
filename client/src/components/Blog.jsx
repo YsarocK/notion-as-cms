@@ -12,8 +12,8 @@ export default function Blog() {
     let newArticles = []
     var config = {
         method: 'get',
-        url: 'http://localhost:5000/notion/articles'
-        // url: 'https://api-etiennemoureton.herokuapp.com/notion/articles',
+        // url: 'http://localhost:5000/notion/articles'
+        url: 'https://api-etiennemoureton.herokuapp.com/notion/articles',
       };
       
     await axios(config)

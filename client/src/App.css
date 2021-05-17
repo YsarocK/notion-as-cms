@@ -1,7 +1,30 @@
-.App {
+.App, .blog {
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  padding: 20px 50px;
+}
+
+.notion-article{
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+  border: 1px solid rgba(0,0,0,.125);
+  border-radius: .25rem;
+  list-style-type: none;
+  margin: 10px 0px
+}
+
+.notion-article-id{
+  font-size: 0.6em;
+  opacity: 0.7;
+}
+
+.notion-article a {
+  text-decoration: none;
+  color: black
 }

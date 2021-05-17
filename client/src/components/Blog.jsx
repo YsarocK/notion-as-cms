@@ -12,7 +12,8 @@ export default function Blog() {
     let newArticles = []
     var config = {
         method: 'get',
-        url: 'https://api-etiennemoureton.herokuapp.com/notion/articles',
+        url: 'http://localhost:5000/notion/articles'
+        // url: 'https://api-etiennemoureton.herokuapp.com/notion/articles',
       };
       
     await axios(config)
@@ -39,14 +40,17 @@ export default function Blog() {
   }, []);
 
   return(
-      <ul className="blog">
-          <div id="reload" onClick={getArticles}>
-            <img src="/loading.png"></img>
+    <div>
+      <div id="reload" onClick={getArticles}>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png"></img>
             <p id="">{apiState}</p>
-          </div>
+            <img src="/loading.png" id="loading-icon"></img>
+      </div>
+      <ul className="blog">
           {articles.map(function(d, idx){
             return (<Article title={d.title} id={d.id} key={idx}/>)
           })}
       </ul>
+    </div>
   )
 }

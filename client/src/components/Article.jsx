@@ -24,8 +24,11 @@ export default function Article(props) {
     return(
         <li className="notion-article">
             <a href={link} target="_blank">
-                <p className="notion-article-title">{props.title}</p>
-                <p className="notion-article-id">{props.id}</p>
+                <p className="notion-article-title">{props.title}</p>            
+            </a>
+            <p className="notion-article-id">{props.id}</p>
+            <a href={'/article/' + props.id}>
+                <button>See Article<div><p>Open</p></div></button>
             </a>
         </li>
     )

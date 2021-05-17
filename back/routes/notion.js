@@ -28,8 +28,4 @@ app.get("/article/:id", (req, res) => {
     });
 });
 
-app.get('/download', (req, res) => {
-    res.download('janus.png', 'mycustomfile')
-});
-
 module.exports = app

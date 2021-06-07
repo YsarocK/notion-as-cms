@@ -1,5 +1,5 @@
 # notion-as-cms
-Notion API used as a CMS. Published on Heroku.
+Notion API used as a CMS. Published & deployed on Heroku.
 
 __USING NOTION AS A CMS__
 
